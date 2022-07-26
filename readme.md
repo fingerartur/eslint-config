@@ -16,12 +16,12 @@ github:fingerartur/eslint-plugin-import \
 // ./eslintrc.js
 
 module.exports = {
-    "root": true,
-    "extends": [
-        "@finga",
-    ],
+    root: true,
+    extends: [ "@finga" ],
 }
 ```
+
+## Advanced Usage
 
 If your TS config file is NOT located in the default location ./tsconfig.json,
 you will have to specify its special location:
@@ -30,12 +30,10 @@ you will have to specify its special location:
 // ./eslintrc.js
 
 module.exports = {
-    "root": true,
-    "extends": [
-        "@finga",
-    ],
-    "parserOptions": {
-        "project": "./path/to/tsconfig.json"
+    root: true,
+    extends: [ "@finga" ],
+    parserOptions: {
+        project: "./path/to/tsconfig.json"
     },
 }
 ```
