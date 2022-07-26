@@ -27,8 +27,7 @@ module.exports = {
   ],
   "plugins": [
     "@typescript-eslint",
-    "import",
-    "jest",
+    "import"
   ],
   "extends": [
     /**
@@ -43,12 +42,7 @@ module.exports = {
      */
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript",
-    /**
-     * Jest testing
-     */
-    "plugin:jest/recommended",
-    "plugin:jest/style"
+    "plugin:import/typescript"
   ],
   "env": {
     "browser": true

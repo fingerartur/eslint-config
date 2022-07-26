@@ -6,8 +6,9 @@ This is a ready-for-action Eslint pack for TypeScript web projects and libs.
 Install
 
 ```
-npm i -D eslint @typescript-eslint/eslint-plugin@^5 github:fingerartur/eslint-plugin-import \
-eslint-plugin-jest@^26 @finga/eslint-config
+npm i -D eslint @typescript-eslint/eslint-plugin@^5 \
+github:fingerartur/eslint-plugin-import \
+@finga/eslint-config
 ```
 
 ```js
@@ -63,17 +64,6 @@ Import sorting is powered by `github:fingerartur/eslint-plugin-import`.
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-  ]
-}
-```
-
-It applies **Eslint rules for Jest testing**. These rules are only applied to test files. Jest uses a bunch of global functions like `describe`, `it`, but none of these are exist from the point of view of Eslint and these rules are here to fix that.
-
-```js
-{
-  extends: [
-    "plugin:jest/recommended",
-    "plugin:jest/style",
   ]
 }
 ```
