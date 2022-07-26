@@ -72,6 +72,7 @@ And lastly it applies a extra bunch of **formatting rules**
 - enforce dangling comma
 - use single quotes only
 - enforce curly braces for `if` statements
+- enforce that object keys are not in quotes unless absolutely necessary
 - allow empty functions
 - allow rich auto-inference of TS types across functions and files
 

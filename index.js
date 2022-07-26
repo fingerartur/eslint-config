@@ -24,6 +24,7 @@ module.exports = {
     // envs
     '**/.env',
     '**/.gitignore',
+    '**/.eslintrc.js'
   ],
   plugins: [
     '@typescript-eslint',
@@ -87,6 +88,8 @@ module.exports = {
         after: true,
       },
     ],
+    // make user JS object keys are not quoted like a JSON object, unless absolutely necessary
+    'quote-props': ['error', 'as-needed'],
 
     // Module imports -------------------------------------------------------
     'import/order': [
