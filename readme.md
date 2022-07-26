@@ -77,3 +77,10 @@ And lastly it applies a extra bunch of **formatting rules**
 - allow rich auto-inference of TS types across functions and files
 
 *To learn precisely what configs are applied go and check out the [config file](https://github.com/fingerartur/eslint-config/blob/master/index.js).*
+
+## Changelog
+
+- v1.1.0
+  - Added rule to remove quotes around object keys
+- v1.0.0
+  - TS, JS rules, import ordering, formatting rules
