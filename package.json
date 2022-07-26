@@ -1,0 +1,24 @@
+{
+  "name": "@finga/eslint-config",
+  "version": "1.0.0",
+  "description": "Eslint pack for Typescript web apps or libs",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fingerartur/eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "fingerartur@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/parser": "^5.31.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "eslint": ">= 8",
+    "eslint-plugin-import": "github:fingerartur/eslint-plugin-import"
+  }
+}

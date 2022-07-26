@@ -1,0 +1,4 @@
+- json
+- react
+- jest
+- cypress
