@@ -12,7 +12,7 @@ module.exports = {
     "**/*.drawio",
     // libs
     "**/node_modules/",
-    "**/*.lock"
+    "**/*.lock",
     // dist files
     "**/dist/",
     "**/lib/",
