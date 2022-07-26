@@ -4,26 +4,42 @@
 module.exports = {
   "parser": "@typescript-eslint/parser",
   "ignorePatterns": [
+    // text files
     "**/*.md",
     "**/*.json",
     "**/*.xml",
+    "**/*.txt",
+    "**/*.drawio",
+    // libs
     "**/node_modules/",
-    "**/dist/",
-    "**/.env",
-    ".deprecated/",
-    ".doc/",
     "**/*.lock"
+    // dist files
+    "**/dist/",
+    "**/lib/",
+    "**/out/",
+    // docs
+    ".doc/",
+    "doc/",
+    "docs/",
+    // envs
+    "**/.env",
+    "**/.gitignore",
   ],
   "plugins": [
     "@typescript-eslint",
     "import",
   ],
   "extends": [
-    // Prevent disastrous language features
+    /**
+     * Prevent people from writing extremely convoluted or nonsensical JS/TS which is syntactically correct,
+     * yes, but only a madman would code this way.
+     */
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    // Import sorting
+    /**
+     * Sorting and dedupe of module imports
+     */
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript"

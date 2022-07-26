@@ -40,15 +40,18 @@ module.exports = {
 If your TS config file is not located in the default `./tsconfig.json` path,
 
 ## What does it do anyway?
-It combines basic recommended lint rules for JS and TS
 
-```
-"eslint:recommended"
-"plugin:@typescript-eslint/recommended"
-"plugin:@typescript-eslint/recommended-requiring-type-checking"
-```
+It applies basic Eslint rules for JS and TS recommended by the authors of Eslint.
 
-plus it adds import sorting and deduplication. Plus it configures your formatting out-of-the-box. The formatting rules are
-- two spaces indentation
-- omitting of curly braces not allowed
-- one empty space after imports
+It applies awesome rules for import sorting and deduplication, with is a really powerful tool for resolving merge conflicts. (Accept both and let Eslint do its magic.)
+Import sorting is powered by `github:fingerartur/eslint-plugin-import`.
+
+And lastly it applies a bunch of formatting rules
+- indent with 2 spaces
+- no semicolons
+- max line length 160 chars
+- enforce dangling comma
+- use single quotes only
+- enforce curly braces for `if` statements
+- allow empty functions
+- allow rich auto-inference of TS types across functions and files
