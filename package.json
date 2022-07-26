@@ -1,6 +1,6 @@
 {
   "name": "@finga/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint pack for Typescript web apps or libs",
   "main": "index.js",
   "repository": {
