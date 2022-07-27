@@ -2,6 +2,8 @@
 
 This is a ready-for-action Eslint pack for TypeScript web projects and libs.
 
+This pack verifies both syntax and semantics sanity, and formatting. *So you do not need to use Prettier*.
+
 ## Usage
 **Install**
 
@@ -90,7 +92,7 @@ And lastly it applies a extra bunch of **formatting rules**
 
 ## Changelog
 
-- Unreleased
+- v1.2.0
   - Added support for JS config files such as `webpack.config.js` and `jest.config.js`
   - Automatically uses `./tsconfig.eslint.json` if possible, the fallback is `./tsconfig.json` if it exists, otherwise the TSconfig file must be configured manually
 - v1.1.0
