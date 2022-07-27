@@ -1,3 +1,29 @@
+const fs = require('fs')
+
+/**
+ * Returns the name of the TSconfig file which Eslint uses to determine which files it should
+ * process. Files are selected according to priority:
+ *
+ * 1. ./tsconfig.eslint.json (Special tsconfig dedicated to Eslint configuration)
+ *      it should contain ONLY the following config {"include": [  "**/*.ts", " **/*.js" ] }
+ * 2. ./tsconfig.json (Classic tsconfig)
+ * 3. nothing
+ */
+const getTsConfigFilename = () => {
+  const TS_CONFIG = './tsconfig.json'
+  const ESLINT_TS_CONFIG = './tsconfig.eslint.json'
+
+  if (fs.existsSync(ESLINT_TS_CONFIG)) {
+    return ESLINT_TS_CONFIG
+  }
+
+  if (fs.existsSync(TS_CONFIG)) {
+    return TS_CONFIG
+  }
+
+  return undefined
+}
+
 /**
  * Eslint config for typescript web apps and libs
  */
@@ -54,7 +80,7 @@ module.exports = {
     },
     ecmaVersion: 2020,
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: getTsConfigFilename(),
   },
   rules: {
     // Basic formatting (something like prettier) ----------------------------
