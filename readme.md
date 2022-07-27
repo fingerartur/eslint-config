@@ -69,6 +69,12 @@ Import sorting is powered by [github:fingerartur/eslint-plugin-import](https://g
 
 <br/>
 
+It applies **more relaxed Eslint rules for your JS config files**, such as `webpack.config.js`, `jest.config.js`, etc.
+
+*(In general any JS file in the top level of your project is treated as a config file which runs in node environment, and it is not checked so strictly as source code.)*
+
+<br/>
+
 And lastly it applies a extra bunch of **formatting rules**
 - indent with 2 spaces
 - no semicolons
@@ -85,6 +91,7 @@ And lastly it applies a extra bunch of **formatting rules**
 ## Changelog
 
 - Unreleased
+  - Added support for JS config files such as `webpack.config.js` and `jest.config.js`
   - Automatically uses `./tsconfig.eslint.json` if possible, the fallback is `./tsconfig.json` if it exists, otherwise the TSconfig file must be configured manually
 - v1.1.0
   - Added rule to remove quotes around object keys

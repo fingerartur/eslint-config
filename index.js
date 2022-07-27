@@ -172,4 +172,28 @@ module.exports = {
     // Sometimes you need empty functions
     '@typescript-eslint/no-empty-function': 'off',
   },
+  overrides: [
+    /**
+     * Override eslint rules for Javascript config files.
+     *
+     * e.g.
+     *  webpack.config.js
+     *  jest.config.js
+     *  jest.setup.js
+     *
+     * I want to lint them as well, but different rules apply to them. I don't care about being too strict with them
+     * and one big difference is that they run in the `node` environment.
+     */
+    {
+      files: ["**/*.js"],
+      env: {
+        node: true
+      },
+      rules: {
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+      }
+    }
+  ]
 }
