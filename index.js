@@ -2,21 +2,19 @@ const fs = require('fs')
 
 /**
  * Returns the name of the TSconfig file which Eslint uses to determine which files it should
- * process. Files are selected according to priority:
+ * process. First file that exists is returned, tried in this order:
  *
  * 1. ./tsconfig.eslint.json (Special tsconfig dedicated to Eslint configuration)
- *      it should contain ONLY the following config {"include": [  "**/*.ts", " **/*.js" ] }
  * 2. ./tsconfig.json (Classic tsconfig)
- * 3. nothing
+ * 3. undefined
  */
 const getTsConfigFilename = () => {
-  const TS_CONFIG = './tsconfig.json'
   const ESLINT_TS_CONFIG = './tsconfig.eslint.json'
-
   if (fs.existsSync(ESLINT_TS_CONFIG)) {
     return ESLINT_TS_CONFIG
   }
 
+  const TS_CONFIG = './tsconfig.json'
   if (fs.existsSync(TS_CONFIG)) {
     return TS_CONFIG
   }
