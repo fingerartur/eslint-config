@@ -82,36 +82,52 @@ module.exports = {
   },
   rules: {
     // Basic formatting (something like prettier) ----------------------------
+
     // no semicolons
-    semi: ['error', 'never'],
+    semi: 'off',
+    '@typescript-eslint/semi': ['error', 'never'],
+
     // indentation 2 spaces
-    indent: ['error',
+    indent: 'off',
+    '@typescript-eslint/indent': ['error',
       2,
       {
         SwitchCase: 1,
       },
     ],
-    '@typescript-eslint/no-namespace': 'off',
+
     // max line length 160 chars
     'max-len': [
       'warn',
       160,
     ],
+
     // enforce dangling comma
-    'comma-dangle': [
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': [
       'error',
       'always-multiline',
     ],
+
     // single quotes only
-    quotes: ['error', 'single'],
+    'quotes': 'off',
+    '@typescript-eslint/quotes': ['error', 'single'],
+
     // enforce curly braces for functions, ifs, etc.
     curly: ['warn', 'all'],
-    'object-curly-spacing': ['warn', 'always'],
-    'comma-spacing': ['warn',
+
+    // curly spacing
+    'object-curly-spacing': 'off',
+    '@typescript-eslint/object-curly-spacing': ['warn', 'always'],
+
+    // comma spacing
+    'comma-spacing': 'off',
+    '@typescript-eslint/comma-spacing': ['warn',
       {
         after: true,
       },
     ],
+
     // make user JS object keys are not quoted like a JSON object, unless absolutely necessary
     'quote-props': ['error', 'as-needed'],
 
@@ -138,6 +154,7 @@ module.exports = {
         },
       },
     ],
+
     'import/newline-after-import': [
       'warn',
       {
@@ -146,6 +163,10 @@ module.exports = {
     ],
 
     // Typescript config -----------------------------------
+
+    // Disallow namespaces
+    '@typescript-eslint/no-namespace': 'off',
+
     /**
      * Make sure type / interface attrs do not have any delimiter
      *  e.g.
@@ -163,10 +184,13 @@ module.exports = {
         delimiter: 'semi',
       },
     }],
+
     // Allow return types to be auto-inferred
     '@typescript-eslint/explicit-function-return-type': 'off',
+
     // Allow types to be auto-inferred across files
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+
     // Sometimes you need empty functions
     '@typescript-eslint/no-empty-function': 'off',
   },
