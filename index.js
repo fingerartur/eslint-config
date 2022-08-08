@@ -93,6 +93,9 @@ module.exports = {
       2,
       {
         SwitchCase: 1,
+        // Workaround for this issue with TS generics and their params
+        // https://github.com/typescript-eslint/typescript-eslint/issues/455
+        ignoredNodes: ['TSTypeParameterInstantiation'],
       },
     ],
 
