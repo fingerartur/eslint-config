@@ -92,6 +92,9 @@ And lastly it applies a extra bunch of **formatting rules**
 
 ## Changelog
 
+- Unreleased
+  - Added a workaround for [an issue with TS generics and their params](https://github.com/typescript-eslint/typescript-eslint/issues/455)
+  - Fixed basic formatting rules to work better with TS (used `@typescript-eslint/*` variant instead of `eslint/*`)
 - v1.2.0
   - Added support for JS config files such as `webpack.config.js` and `jest.config.js`
   - Automatically uses `./tsconfig.eslint.json` if possible, the fallback is `./tsconfig.json` if it exists, otherwise the TSconfig file must be configured manually
