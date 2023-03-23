@@ -4,20 +4,19 @@ This is a ready-for-action Eslint pack for TypeScript web projects and libs.
 
 This pack verifies both syntax and semantics sanity, and formatting. *So you do not need to use Prettier*.
 
-## Usage
-**Install**
+## Install
 
-```
+```sh
 npm i -D eslint @typescript-eslint/eslint-plugin@^5 \
 github:fingerartur/eslint-plugin-import \
 @finga/eslint-config
 ```
 
-**Configure**
+## Configure
 
-Create `eslintrs.js` file with the following config:
+Create `.eslintrc.js` file with the following config:
 ```js
-// ./eslintrc.js
+// ./.eslintrc.js
 
 module.exports = {
     root: true,
