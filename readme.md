@@ -91,7 +91,9 @@ And lastly it applies a extra bunch of **formatting rules**
 
 ## Changelog
 
-- Unreleased
+- v1.2.2
+  - Un-ignore directories `lib`, `out`, `docs`, `doc`.
+- v1.2.1
   - Added a workaround for [an issue with TS generics and their params](https://github.com/typescript-eslint/typescript-eslint/issues/455)
   - Fixed basic formatting rules to work better with TS (used `@typescript-eslint/*` variant instead of `eslint/*`)
 - v1.2.0

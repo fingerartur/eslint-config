@@ -39,12 +39,12 @@ module.exports = {
     '**/*.lock',
     // dist files
     '**/dist/',
-    '**/lib/',
-    '**/out/',
+    // '**/lib/',
+    // '**/out/',
     // docs
     '.doc/',
-    'doc/',
-    'docs/',
+    // 'doc/',
+    // 'docs/',
     // envs
     '**/.env',
     '**/.gitignore',
